@@ -33,10 +33,11 @@ detect
 
 def find_the_cheese(strings)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  
-  strings.include?(cheese_types[0..2])
+  if strings.include?(cheese_types[0..2])
+    return (cheese_types[0..2])
+  else 
+    return nil
 end
 
 
-[1,2,3,4].detect{|i| i.even?} #=> 2
-[1,2,3,4].detect{|i| i.is_a?(String)} #=> nil
+
