@@ -53,6 +53,13 @@ def find_the_cheese# code an argument here
   cheese_types = ["cheddar", "gouda", "camembert"]
 end
 
+
+[1,2,3,4].detect{|i| i.even?} #=> 2
+[1,2,3,4].detect{|i| i.is_a?(String)} #=> nil
+
+
+
+
 [1,2,100].any?{|i| i > 99} #=> true
 
 def line(a)
