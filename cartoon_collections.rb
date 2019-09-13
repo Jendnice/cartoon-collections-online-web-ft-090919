@@ -30,12 +30,22 @@ end
 
 def find_the_cheese(strings)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  if strings.include?(cheese_types[0..2])
+    strings.detect do |type|
+    cheese_types.include?(type)
     return (cheese_types[0..2])
   else 
     return nil
   end 
 end
+
+def find_the_cheese(array)
+  cheese_types = ["cheddar", "gouda", "camembert"]
+    array.find do |type|
+    cheese_types.include?(type)
+  end 
+end
+
+find_the_cheese(snacks)
 
 
 
